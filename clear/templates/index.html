@@ -1,0 +1,1252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="author" content="potenzaglobalsolutions.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Clear IT Solutions</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+    
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.css' %}">
+    <!-- Template Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--Types J.s-->
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+      {% block content %}
+    <!--=================================
+    cursor -->
+    <div id="cursor">
+      <div class="cursor__circle"></div>
+    </div>
+    <!--=================================
+    cursor -->
+    
+    <div id="page" class="main">
+
+      <!--=================================
+      Header -->
+      <header class="header header-default header-sticky header-absolute">
+        <div class="header-inner">
+          <div class="site-logo">
+            <a class="navbar-brand" href="index.html"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" alt="logo" style="height: 100px; " /></a>
+          </div>
+          <div class="site-menu d-none d-xl-block navigation" >
+            <ul class="main-menu">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'course' %}">Course</a></li>
+
+              <!-- <li class="nav-item"><a class="nav-link" href="#">Pages <i class="fa-solid fa-chevron-down"></i></a> -->
+                <ul class="main-menu">
+                   <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                  <!-- <li><a class="nav-link" href="pricing.html">Pricing</a></li> -->
+                  <li class="nav-item"><a class="nav-link" href="{% url 'careers' %}">Careers</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+                  <!-- <li class="nav-item"><a class="nav-link" href="faq.html">Faq</a></li>
+                  <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li> -->
+                  <!-- <li><a class="nav-link" href="team-single.html">Team Single</a></li>
+                  <li><a class="nav-link" href="typography.html">Typography</a></li>
+                  <li><a class="nav-link" href="page-left-sidebar.html">Page Left Sidebar</a></li>
+                  <li><a class="nav-link" href="page-right-sidebar.html">Page Right Sidebar</a></li>
+                  <li><a class="nav-link" href="error-404.html">Error 404</a></li>
+                  <li><a class="nav-link" href="coming-soon.html">Coming Soon</a></li> -->
+                </ul>
+              </li>
+              <!-- <li>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
+                  <li class="nav-item"><a class="nav-link" href="index-02.html">Course</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="nav-item"><a class="nav-link" href="#">Case Studies <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                  <li><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+                  <li><a class="nav-link" href="case-studies-detail.html">Case Studies Single</a></li>
+                </ul>
+              </li> -->
+              <!-- <li class="nav-item"><a class="nav-link" href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                  <li><a class="nav-link" href="blog.html">Blog Standard</a></li>
+                  <li><a class="nav-link" href="blog-detail.html">Blog Single</a></li>
+                </ul>
+              </li> -->
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="site-action d-none d-xl-block">
+            <div class="action-hamburger">
+              <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="hamburger-container">
+                  <span class="hamburger-inner"></span>
+                  <span class="hamburger-hidden"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mobile-action d-block d-xl-none">
+            <div class="mobile-hamburger">
+              <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+                <span class="hamburger-container">
+                  <span class="hamburger-inner"></span>
+                  <span class="hamburger-hidden"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- =================================
+      Main Menu OffCanvas -->
+      <div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+        <div class="offcanvas-header">
+          <a id="menuOffcanvasLabel" class="navbar-brand" href="index.html"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}"  alt="logo" style="height: 150px;" /></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body lenis-scroll-disable">
+          <div class="body-inner">
+            <nav class="navbar">
+              <ul class="navbar-nav">
+                <li>
+                  <a class="nav-item" href="{% url 'index' %}">Home</a></li>
+                  <li><a class="nav-item" href="{% url 'course' %}">Course</a></li>
+                  <li><a class="nav-item" href="{% url 'about' %}">About Us</a></li>
+                  <li><a class="nav-item" href="{% url 'careers' %}">Careers</a></li>
+
+                  <!-- <ul class="dropdown-menu">
+                    <li><a class="dropdown-item active" href="index.html">Home 01</a></li>
+                    
+                    <li><a class="dropdown-item" href="index-03.html">Home 03</a></li>
+                  </ul> -->
+                </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                  <ul class="dropdown-menu">
+                    
+                    <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                    <li><a class="dropdown-item" href="contact-us.html">Contact</a></li>
+                    <li><a class="dropdown-item" href="faq.html">Faq</a></li>
+                    <li><a class="dropdown-item" href="team.html">Team</a></li>
+                    <li><a class="dropdown-item" href="team-single.html">Team Single</a></li>
+                    <li><a class="dropdown-item" href="typography.html">Typography</a></li>
+                    <li><a class="dropdown-item" href="page-left-sidebar.html">Page Left Sidebar</a></li>
+                    <li><a class="dropdown-item" href="page-right-sidebar.html">Page Right Sidebar</a></li>
+                    <li><a class="dropdown-item" href="error-404.html">Error 404</a></li>
+                    <li><a class="dropdown-item" href="coming-soon.html">Coming Soon</a></li>
+                  </ul>
+                </li> -->
+                <li><a class="nav-item" href="{% url 'service' %}">Service</a></li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
+                  <ul>
+                    
+                    <li><a class="dropdown-item" href="service-detail.html">Service Single</a></li> 
+                  </ul>
+                </li> -->
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Case Studies</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="case-studies.html">Case Studies</a></li>
+                    <li><a class="dropdown-item" href="case-studies-detail.html">Case Studies Single</a></li>
+                  </ul>
+                </li> -->
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="blog.html">Blog Standard</a></li>
+                    <li><a class="dropdown-item" href="blog-detail.html">Blog Single</a></li>
+                  </ul>
+                </li> -->
+                <li ><a class="nav-item" href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="bottom-info">
+              <div class="contact-info">
+                <span class="number">+1 234 567 8910</span>
+                <a class="mail" href="#"><i class="fa-regular fa-envelope"></i>info@gmail.com</a>
+                <span class="text">Looking for collaboration for your next creative project?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--=================================
+      Header Side Panel -->
+      <div class="offcanvas offcanvas-end sidepanel-offcanvas" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="offcanvas-body lenis-scroll-disable">
+          <div class="body-inner">
+            <div class="about-info">
+              <h4 class="title mb-3">From Idea to Impact – We Support Your Journey</h4>
+              <p>At Clear IT Solutions, we believe every great venture starts with a simple idea. Whether you're launching a startup or scaling a growing business, we help turn your vision into reality. From planning and development to support and optimization, we're with you every step. We don't just offer solutions—we build lasting partnerships that drive innovation and impact.</p>
+            </div>
+            <div class="socail-info">
+              <ul class="socail-list-item">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i>Dribbble</a></li>
+              </ul>
+            </div>
+            <div class="contact-info">
+              <span class="number">+1 9802761002</span>
+              <a class="mail" href="#"><i class="fa-regular fa-envelope"></i>hr@clearitsolutions.co</a>
+              <span class="text">Looking for collaboration for your next creative project? Fell free to connect us!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="site-content">
+
+      <div class="container-fluid">
+        <div class="item-efftect">
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+        </div>
+      </div>
+
+        <!--=============Main Banner==================-->
+        <div class="main-banner main-banner-1">
+          <div class="banner-inner">
+            <img class="img-fluid banner-bg-one" src="{% static 'images/banner/banner-01/banner-bg-01.png' %}" alt="#">
+         <h6 class="banner-title" id="typing-target"></h6>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="img-fluid rotate rotate-img" style="height: 150px;" src="{% static 'images/banner/banner-01/banner-shape-01.png' %}" alt="#">
+                </div>
+                <div class="col-md-6 ms-auto">
+                  <div class="banner-content">
+                    <h2><span class="auto-type"></span></h2>
+                    <!-- <p>At Clear IT Solutions, we believe in the power of clarity. Our mission is to provide transparent, effective IT solutions that empower businesses to thrive in a digital world. With a focus on innovation and customer satisfaction, we turn complex challenges into simple, actionable strategies.</p> -->
+                    <!-- <a class="btn btn-effect" href="#">
+                      <span>Get A Quote</span>
+                      <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_59_253)"><path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/></g><defs><clipPath id="clip0_59_253"><rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/></clipPath></defs></svg>
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-wrapper">
+
+          <!--=======About Info=======-->
+          <section class="">
+            <div class="container">
+              <div class="row justify-content-between">
+
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                  <div class="section-title pb-0 pb-lg-4">
+                    <span class="sub-title"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> About Us</span>
+                    <h2 class="title"> Your experience is everything to us </h2>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <img class="img-fluid" src="{% static 'images/about/about-03.jpg' %}" alt="#">
+                    </div>
+                    <div class="col-sm-8">
+                      <p class="ps-lg-3 mt-4 mt-sm-0">At Clear IT Solutions, your experience is our top priority. We believe that technology should not only work—it should work for you. With a commitment to transparency, reliability, and innovation, we deliver IT solutions that are tailored to your unique needs.
+
+                        From streamlined software development to robust support and consulting, our mission is to simplify complex challenges and provide clear, effective results. Every line of code, every interface we design, and every solution we deploy is done with one goal in mind—to elevate your experience.</p>
+                      <div class="d-flex justify-content-center mt-5 ms-sm-5 ms-0">
+                        <a class="btn btn-effect" href="{% url 'about' %}">
+                          <span>About Us</span>
+                          <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_59_254)"><path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/></g><defs><clipPath id="clip0_59_254"><rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/></clipPath></defs></svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4 mt-sm-5">
+                    <div class="col-sm-6">
+                      <div class="counter counter-style-1">
+                        <div class="counter-number"><span class="timer mb-0" data-to="240" data-speed="2000">240</span><span class="suffix">+</span></div>
+                        <div class="counter-info"><span class="counter-title">Business Peoples</span></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="counter counter-style-1">
+                        <div class="counter-number"><span class="timer mb-0" data-to="100" data-speed="2000">100</span><span class="suffix">%</span></div>
+                        <div class="counter-info"><span class="counter-title">Customer Satisfaction</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-lg-5">
+                  <img class="img-fluid ps-lg-5" src="{% static 'images/about/about-01.jpg' %}" alt="#">
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          About Info -->
+
+          <!--=================================
+          Client Logo -->           
+           <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-md-12">
+                  <div class="marquee-wrapper">
+                    <div class="marquee-inner">
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt="" /></span>
+                        <span class="title">Web Design</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt="" /></span>
+                        <span class="title">UI/UX Design</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt="" /></span>
+                        <span class="title">Developer</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt="" /></span>
+                        <span class="title">ISO Developer</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt="" /></span>
+                        <span class="title">Digital Agency</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt="" /></span>
+                        <span class="title">Web Design</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt="" /></span>
+                        <span class="title">UI/UX Design</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt="" /></span>
+                        <span class="title">Developer</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt="" /></span>
+                        <span class="title">ISO Developer</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt="" /></span>
+                        <span class="title">Digital Agency</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--=================================
+          Client Logo -->
+
+          <!--=================================
+          Our Services -->
+          <section class="space-pt bg-black z-index-2 ellipse-top">
+            <div class="space-pb ellipse-bottom">
+              <div class="container">
+                <div class="row justify-content-between">
+                  <div class="col-xxl-5 col-xl-5 mb-5 mb-xl-0">
+                    <div class="sticky-top" style="top: 80px;">
+                      <div class="section-title">
+                        <h1 class="text-center">Our Services</h1>
+                        <!-- <span class="sub-title"><img class="img-fluid" src="images/subtitle-icon.png" alt=""> Our Steps</span> -->
+                        <h2 class="title"> Where Innovation Meets Implementation..</h2>
+                      </div>
+                      <div class="ps-xxl-5 ms-0 ms-md-5">
+                        <p>In software development and project management, progress relies on decision-making. The initial step is deciding to proceed, which triggers subsequent actions. This step is often overlooked due to the complexity of decision-making and the need for strategic alignment. A well-informed decision sets the foundation for effective execution, ensuring proper coordination of resources, timelines, and objectives.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xxl-6 col-xl-7">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="services grid-wrapper">
+                          <div class="service-wrapper service-style-1"><div class="service-inner">
+                            <div class="service-icon">
+                              <img class="img-fluid" style="height: 50px;"  src="{% static 'images/svg/services/color-icon/web-dev-1.svg' %}" alt="#">
+                            </div>
+                            <div class="bg-icon">
+                              <img class="img-fluid" style="filter: brightness(1.5);" src="{% static 'images/svg/services/color-icon/webdev1.0.jpg' %}" alt="#">
+                            </div>
+                            <div class="service-content">
+                              <h5 class="service-title">Web Development</h5>
+                              <p>Web development is the process of building websites and web applications using technologies like HTML, CSS, JavaScript, and backend languages. It includes both front-end development, which focuses on the user interface, and back-end development, which handles the server, database, and application logic.</p>
+                              <div class="service-links">
+                                <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_133)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"/><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"/></g><defs><clipPath id="clip0_923_133"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"/></clipPath></defs></svg></a>
+                              </div>
+                            </div>
+                          </div></div>
+                          <div class="service-wrapper service-style-1"><div class="service-inner">
+                            <div class="service-icon">
+                              <img class="img-fluid" style="height: 50px;" src="{% static 'images/svg/services/color-icon/mob.svg' %}" alt="#">
+                            </div>
+                            <div class="bg-icon">
+                              <img class="img-fluid" style="filter: brightness(1.5);" src="{% static 'images/svg/services/color-icon/appdev.jpeg' %}" alt="#">
+                            </div>
+                            <div class="service-content">
+                              <h5 class="service-title">App Development</h5>
+                              <p>Web and app development involve creating interactive platforms for users—web development focuses on websites and web applications using technologies like HTML, CSS, JavaScript for the front-end and Python, PHP, or Node.js for the back-end.</p>
+                              <div class="service-links">
+                                <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_134)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"/><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"/></g><defs><clipPath id="clip0_923_134"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"/></clipPath></defs></svg></a>
+                              </div>
+                            </div>
+                          </div></div>
+                          <div class="service-wrapper service-style-1"><div class="service-inner">
+                            <div class="service-icon">
+                              <img class="img-fluid" style="height: 50px;" src="{% static 'images/svg/services/color-icon/training.svg' %}" alt="#">
+                            </div>
+                            <div class="bg-icon">
+                              <img class="img-fluid" style="filter: brightness(1.5);" src="{% static 'images/svg/services/color-icon/full-stack-development.png' %}" alt="#">
+                            </div>
+                            <div class="service-content">
+                              <h5 class="service-title">Full Stack Training</h5>
+                              <p>Full stack training teaches learners to build both the front-end and back-end of web applications. It covers HTML, CSS, JavaScript, React.js, Node.js, Express.js, and databases like MongoDB or MySQL. Students also learn APIs, Git, and deployment.</p>
+                              <div class="service-links">
+                                <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_135)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"/><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"/></g><defs><clipPath id="clip0_923_135"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"/></clipPath></defs></svg></a>
+                              </div>
+                            </div>
+                          </div></div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="services grid-wrapper service-top-space">
+                          <div class="service-wrapper service-style-1"><div class="service-inner">
+                            <div class="service-icon">
+                              <img class="img-fluid" style="height: 50px;" src="{% static 'images/svg/services/color-icon/cloud.svg' %}" alt="#">
+                            </div>
+                            <div class="bg-icon">
+                              <img class="img-fluid" style="filter: brightness(3.5);" src="{% static 'images/svg/services/color-icon/aws-img1.jpg' %}" alt="#">
+                            </div>
+                            <div class="service-content">
+                              <h5 class="service-title">AWS Cloud Computing</h5>
+                              <p>AWS (Amazon Web Services) is a leading cloud computing platform offering on-demand services like storage, databases, computing power, and networking. It helps businesses scale applications without managing physical servers.</p>
+                              <div class="service-links">
+                                <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_136)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"/><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"/></g><defs><clipPath id="clip0_923_136"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"/></clipPath></defs></svg></a>
+                              </div>
+                            </div>
+                          </div></div>
+                          <div class="service-wrapper service-style-1"><div class="service-inner">
+                            <div class="service-icon">
+                              <img class="img-fluid" style="height: 50px;" src="{% static 'images/svg/services/color-icon/devops.svg' %}" alt="#">
+                            </div>
+                            <div class="bg-icon">
+                              <img class="img-fluid" style="filter: brightness(3.5);" src="{% static 'images/svg/services/color-icon/devops1.webp' %}" alt="#">
+                            </div>
+                            <div class="service-content">
+                              <h5 class="service-title">Devops</h5>
+                              <p>DevOps is a practice that combines software development and IT operations to improve collaboration, automate workflows, and speed up software delivery. It emphasizes continuous integration, continuous deployment (CI/CD), and monitoring for faster, more reliable releases. </p>
+                              <div class="service-links">
+                                <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_137)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"/><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"/></g><defs><clipPath id="clip0_923_137"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"/></clipPath></defs></svg></a>
+                              </div>
+                            </div>
+                          </div></div>
+                          <div class="service-wrapper service-style-1"><div class="service-inner">
+                            <div class="service-icon">
+                              <img class="img-fluid" style="height: 50px;" src="{% static 'images/svg/services/color-icon/aws-training.svg' %}" alt="#">
+                            </div>
+                            <div class="bg-icon">
+                              <img class="img-fluid" style="filter: brightness(3.5);" src="{% static 'images/svg/services/color-icon/What-Is-AWS-DevOps.jpg' %}" alt="#">
+                            </div>
+                            <div class="service-content">
+                              <h5 class="service-title">AWS+Devops Training</h5>
+                              <p>AWS + DevOps training teaches learners to build, deploy, and manage cloud applications using AWS services and DevOps practices like CI/CD and automation.</p>
+                              <div class="service-links">
+                                <a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_138)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"/><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"/></g><defs><clipPath id="clip0_923_138"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"/></clipPath></defs></svg></a>
+                              </div>
+                            </div>
+                          </div>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          Our Services -->
+
+          <!--=================================
+          Case Studies -->
+          <section class="space-ptb z-index-2">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-5">
+                  <div class="section-title mb-4 mb-lg-0">
+                    <span class="sub-title"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> Case Studies</span>
+                    <h2 class="title"> Projects For Our Amazing Clients</h2>
+                  </div>
+                </div>
+               <div class="col-xl-5 col-lg-4">
+                <p>We believe every client is unique, and so is every solution we create. That's why we take the time to understand your goals, challenges, and vision before crafting a strategy that fits your exact needs. Every project we deliver is carefully tailored with creativity, technical expertise, and a deep commitment to quality. From design to deployment, we infuse every step with passion and precision—ensuring outcomes that not only meet expectations but exceed them.</p>
+               </div>
+               <div class="col-xl-2 col-lg-3 text-end">
+                  <a class="btn btn-effect" href="#">
+                    <span>Check Out our projects</span>
+                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_59_255)"><path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/></g><defs><clipPath id="clip0_59_255"><rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/></clipPath></defs></svg>
+                  </a>
+               </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="case-studies-wrapper case-studies-style-2">
+                    <div class="case-studies-item">
+                      <div class="item-inner">
+                        <h3 class="case-studies-title">Gozzby</h3>
+                        <div class="case-studies-description">Some people will tell you there are four while others may tell you there are eight thing.</div>
+                        <div class="case-studies-action"><a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_139)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></g><defs><clipPath id="clip0_923_139"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"></rect></clipPath></defs></svg></a></div>
+                      </div>
+                      <div class="case-studies-image"><img class="img-fluid gsap-img-animation" src="{% static 'images/case-studies/01.png' %}" alt="" style="scale: none; transform: translate(-50%, -50%) translate(746px, 498px); opacity: 0; visibility: hidden;"></div>
+                      <div class="marquee-wrapper">
+                        <div class="marquee-inner">
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="case-studies-item">
+                      <div class="item-inner">
+                        <h3 class="case-studies-title">Petfluent</h3>
+                        <div class="case-studies-description">Some people will tell you there are four while others may tell you there are eight thing.</div>
+                        <div class="case-studies-action"><a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_140)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></g><defs><clipPath id="clip0_923_140"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"></rect></clipPath></defs></svg></a></div>
+                      </div>
+                      <div class="case-studies-image"><img class="img-fluid gsap-img-animation" src="{% static 'images/case-studies/02.png' %}" alt="" style="scale: none; transform: translate(-50%, -50%) translate(746px, 498px); opacity: 0; visibility: hidden;"></div>
+                      <div class="marquee-wrapper">
+                        <div class="marquee-inner">
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="case-studies-item">
+                      <div class="item-inner">
+                        <h3 class="case-studies-title">Mobifluent</h3>
+                        <div class="case-studies-description">Some people will tell you there are four while others may tell you there are eight thing.</div>
+                        <div class="case-studies-action"><a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_141)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></g><defs><clipPath id="clip0_923_141"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"></rect></clipPath></defs></svg></a></div>
+                      </div>
+                      <div class="case-studies-image"><img class="img-fluid gsap-img-animation" src="{% static 'images/case-studies/03.png' %}" alt="" style="scale: none; transform: translate(-50%, -50%) translate(746px, 498px); opacity: 0; visibility: hidden;"></div>
+                      <div class="marquee-wrapper">
+                        <div class="marquee-inner">
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="case-studies-item">
+                      <div class="item-inner">
+                        <h3 class="case-studies-title">Financeoont</h3>
+                        <div class="case-studies-description">Some people will tell you there are four while others may tell you there are eight thing.</div>
+                        <div class="case-studies-action"><a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_142)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></g><defs><clipPath id="clip0_923_142"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"></rect></clipPath></defs></svg></a></div>
+                      </div>
+                      <div class="case-studies-image"><img class="img-fluid gsap-img-animation" src="{% static 'images/case-studies/01.png' %}" alt="" style="scale: none; transform: translate(-50%, -50%) translate(746px, 498px); opacity: 0; visibility: hidden;"></div>
+                      <div class="marquee-wrapper">
+                        <div class="marquee-inner">
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="case-studies-item">
+                      <div class="item-inner">
+                        <h3 class="case-studies-title">Educatgenix</h3>
+                        <div class="case-studies-description">Some people will tell you there are four while others may tell you there are eight thing.</div>
+                        <div class="case-studies-action"><a class="btn-arrow" href="#"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_923_143)"><path d="M8.70801 0.959961L9.29825 2.7665C10.2512 5.68321 12.8308 7.77453 15.8928 8.1128C12.8468 8.37564 10.2578 10.4348 9.3276 13.3343L8.70801 15.2657" stroke="inherit" stroke-width="2"></path><path d="M15.7602 8.12158H0.1875" stroke="inherit" stroke-width="2"></path></g><defs><clipPath id="clip0_923_143"><rect width="15.904" height="14.8437" fill="inherit" transform="translate(0.1875 0.578125)"></rect></clipPath></defs></svg></a></div>
+                      </div>
+                      <div class="case-studies-image"><img class="img-fluid gsap-img-animation" src="{% static 'images/case-studies/02.png' %}" alt="" style="scale: none; transform: translate(-50%, -50%) translate(746px, 498px); opacity: 0; visibility: hidden;"></div>
+                      <div class="marquee-wrapper">
+                        <div class="marquee-inner">
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt=""></span>
+                            <span class="title">Web Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt=""></span>
+                            <span class="title">UI/UX Design</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt=""></span>
+                            <span class="title">Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt=""></span>
+                            <span class="title">ISO Developer</span>
+                          </div>
+                          <div class="marquee-item">
+                            <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt=""></span>
+                            <span class="title">Digital Agency</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          Case Studies -->
+
+          <!--=================================
+          Our Testimonial -->
+          <section class="space-ptb testimonial-section overflow-hidden ellipse-top bg-black z-index-2">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-10">
+                  <div class="section-title text-center">
+                    <span class="sub-title justify-content-center"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> Our Testimonial</span>
+                    <h2 class="title"> Over 250 clients and More than 300 students And 500+ projects across the globe.</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="row justify-content-start">
+                <div class="col-md-11">
+                  <div class="owl-carousel slider-overflow" data-cursor-type="text" data-custom-text="Drag" data-nav-arrow="false" data-items="2" data-lg-items="1" data-md-items="1" data-sm-items="1" data-space="50">
+                    <div class="item">
+                      <div class="testimonial-wrapper testimonial-style-2">
+                        <div class="testimonial-ratings">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                         <span class="text-warning">5/5</span> 
+                        </div>
+                        <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                        <div class="testimonial-content">
+                          <p>I enrolled in the 'Python Full Stack' course, and my frontend and backend trainer, 'Mr. Sagar Varma Sir', is excellent at explaining concepts with real-time examples, making learning easier. Currently,And i have also enrolled for 'Django', With same trainer trainer, 'Mr. Sagar Varma sir', is both friendly and strict when it comes to academics, ensuring we stay focused.
+
+Overall, my experience at Teks Academy has been positive. However, I suggest they conduct more effective placement drives and implement stricter attendance policies, as many students tend to be irregular. While it's the student's responsibility, having a system to enforce discipline would enhance the learning experience.</p>
+                        </div>
+                        <div class="testimonial-author">
+                          <div class="author-info">
+                            <h6 class="author-name">Neelapu Harshavardhini</h6>
+                            <span class="author-position">student</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimonial-wrapper testimonial-style-2">
+                        <div class="testimonial-ratings">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                         <span class="text-warning">5/5</span> 
+                        </div>
+                        <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                        <div class="testimonial-content">
+                          <p>I had the opportunity to learn AWS and DevOps from rahmath sir and I have to say—it was a game-changer. What really stood out was the way complex concepts were broken down into simple, real-world examples. The trainer didn't just stick to theory; we were constantly working on hands-on that mimicked actual industry scenarios, which made learning much more engaging and practical.
+                              I felt confident enough to start working on real-time cloud projects and even crack interviews. If you're looking for someone who genuinely cares about your learning journey and can help bridge the gap between theory and practice, I'd highly recommend rahmath sir.</p>
+                        </div>
+                        <div class="testimonial-author">
+                          <div class="author-info">
+                            <h6 class="author-name">Sai prasuna</h6>
+                            <span class="author-position">student</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimonial-wrapper testimonial-style-2">
+                        <div class="testimonial-ratings">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                         <span class="text-warning">5/5</span> 
+
+                        </div>
+                        <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                        <div class="testimonial-content">
+                          <p>Xcellent teaching, Rahmath Sir has great knowledge & will teach you from the basics to get a clear understanding of AWS & DevOps without confusion. He'll provide you easy notes to do hands on & interview question & answers every now & then.. And also he'll share you the real time xperience of your work when you get a job. I personally recommend students to go with this Sir who have zero knowledge about the subject.</p>
+                        </div>
+                        <div class="testimonial-author">
+                          <div class="author-info">
+                            <h6 class="author-name">Mohammed Sayeed</h6>
+                            <span class="author-position">student</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimonial-wrapper testimonial-style-2">
+                        <div class="testimonial-ratings">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <span class="text-warning">5/5</span> 
+                        </div>
+                        <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                        <div class="testimonial-content">
+                          <p>My name is Varshitha .I have taken full stack python course in the teksacademy.
+The classes are good the trainers are explaining everything in a good way.
+Now I am taking classes about python frame works the trainer is sagar varma sir he is explaining every topic in a clear and making the classes more intresting by giving small assignments to do every day.my previous trainer is Ramya mam she has taken classes of front end and python explained every topic in a good way and clarified our doubts.</p>
+                        </div>
+                        <div class="testimonial-author">
+                          <div class="author-info">
+                            <h6 class="author-name">Varshitha B</h6>
+                            <span class="author-position">student</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          Our Testimonial -->
+
+          <!--=================================
+          FAQ -->
+          <section class="space-pt ellipse-top">
+            <div class="space-pb ellipse-bottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <div class="section-title">
+                      <span class="sub-title justify-content-center"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> FAQ</span>
+                      <h2 class="title mb-0">Frequently Asked Questions</h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="accordion" id="pgsaccordion">
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">01. It turned out to be the Hope Diamond?</button>
+                        </h5>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#pgsaccordion">
+                          <div class="accordion-body">Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today. As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative path.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingTwo">
+                          <button
+                          class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          02. So why do we do it?
+                          </button>
+                        </h5>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#pgsaccordion">
+                          <div class="accordion-body">Step out on to the path to your left. Where there is no change. Instead, you continue doing what you have in the past. What will life be like about staying on this path. Walk out into your future to the 10 year point.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">03. I am worried about e-mail scams...</button>
+                        </h5>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#pgsaccordion">
+                          <div class="accordion-body"> Walk out 10 years into your future and feel how it feels to carry on doing the same thing. I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date. What will your daily life  be like? </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingFour">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">04. Why IT Staff Management?</button>
+                        </h5>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#pgsaccordion">
+                          <div class="accordion-body">Really experience that. See what you see, hear what you hear, feel the feelings. Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change. Drift back to where the path splits.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="accordion" id="pgsaccordion1">
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">05. It turned out to be the Hope Diamond?</button>
+                        </h5>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#pgsaccordion1">
+                          <div class="accordion-body">Imagine reaching deep inside you for all the strength and wisdom that you need to make this decision today. As you do so, imagine that when you choose to make that decision that deep inside your mind you are switching off the alternative path.</div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingSix">
+                          <button
+                          class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          06. So why do we do it?
+                          </button>
+                        </h5>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#pgsaccordion1">
+                          <div class="accordion-body">Step out on to the path to your left. Where there is no change. Instead, you continue doing what you have in the past. What will life be like about staying on this path. Walk out into your future to the 10 year point.</div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingSeven">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">07. I am worried about e-mail scams...</button>
+                        </h5>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#pgsaccordion1">
+                          <div class="accordion-body"> Walk out 10 years into your future and feel how it feels to carry on doing the same thing. I want you to think about how you will feel in 10 years if you continue doing the exact same things you have done to date. What will your daily life  be like? </div>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingEight">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseThree">08. Why IT Staff Management?</button>
+                        </h5>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#pgsaccordion1">
+                          <div class="accordion-body">Really experience that. See what you see, hear what you hear, feel the feelings. Notice everything that you need to know about what it will be like if you carry on with the same behaviour, putting off change. Drift back to where the path splits.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          FAQ -->
+
+        </div>
+      </div>
+
+      <!--=================================
+      Site Footer -->
+      <footer class="site-footer footer-dark">
+        <div class="footer-main">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-md-5">
+                <div class="widget widget-address-info">
+                  <h5 class="widget-title">Where To Find Us</h5>
+                  <ul class="address-info-list">
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-contacts.svg' %}" alt="" /></i><span class="info"><span>  8 The  Green STE Road, Dover, </span>DELAWARE, UNITED STATES.</span></li>
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-headphone.svg' %}" alt="" /></i><span class="info"><span>+1 9802761002 </span>Mon-fri 8:30am 6:30pm</span></li>
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-email.svg' %}" alt="" /></i><span class="info"><span>hr@clearitsolutions.co </span>24x7 online support</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-5 col-md-7">
+                <div class="widget">
+                  <h5 class="widget-title">Newsletter</h5>
+                  <div class="widget widget-newsletter mb-4 pb-2">
+                    <form class="newsletter-form">
+                      <input type="text" class="form-control" placeholder="Enter Your Email">
+                      <button type="submit" class="subscribe-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                  </div>
+                  <div class="widget widget-menu">
+                    <h6 class="widget-title">Quick Links</h6>
+                    <ul class="list-unstyled list-col-3 mb-0">
+                      <li><a href="{% url 'index' %}">Home</a></li>
+                      <li><a href="{% url 'about' %}">About us</a></li>
+                      <!-- <li><a href="team.html">Team</a></li>
+                      <li><a href="team-single.html">Team Single</a></li> -->
+                      <!-- <li><a href="service.html">Service</a></li> -->
+                      <!-- <li><a href="service-detail.html">Service Single</a></li>
+                      <li><a href="blog.html">Blog</a></li>
+                      <li><a href="blog-detail.html">Blog Single</a></li> -->
+                      <!-- <li><a href="contact-us.html">Contact</a></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-12 ms-auto">
+                <div class="widget widget-info">
+                  <h5 class="widget-title">Indian contact-info</h5>
+                  <a class="number" href="tel: +91 9908698806"> +91 9908698806</a>
+                  <h6 class="title">3A & 3B Mindspace, Hitech City, Madhapur, Near Metro Station, Hyderabad, Telangana, INDIA 500081</h6>
+                </div>
+                <div class="widget-socail">
+                  <ul class="socail-icon">
+                    <li><a href="#">Fb</a></li>
+                    <li><a href="#">Dr</a></li>
+                    <li><a href="#">Tw</a></li>
+                    <li><a href="#">Be</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6"><p><a class="footer-logo" href="index.html"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" alt="logo" style="height: 150px;" /></a></p></div>
+              <div class="col-lg-6 text-lg-end"><p>Develop and design by <a href="#">Clear IT Solutions &copy;</a></p></div>
+            </div>
+          </div>
+        </div>
+            <center>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p class="mb-0">© 2021 Clear IT Solutions. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+      </footer>
+
+      <!--=================================
+      Back To Top -->
+      <div class="back-to-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+      </div>
+
+    </div>
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/popper/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'js/swiperanimation/SwiperAnimation.min.js' %}"></script>
+    <script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/counter/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/attractHover.js' %}"></script>
+    <script src="{% static 'js/lenis.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script> <!-- Template Scripts (Do not remove)-->
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+{% block extra_js %}  
+    <script>
+      
+   document.addEventListener("DOMContentLoaded", function () {
+  new Typed(".auto-type", {
+    strings: [
+      '<span style="color:#00ffe1;">US IT</span> <span style="color:#ffdd00;">Recruitment</span>',
+      '<span style="color:#F69F95;">Innovative</span> <span style="color:#ff69b4;">Ideas.</span>',
+      '<span style="color:#1e90ff;">Clear</span> <span style="color:#ff4500;">Thinking.</span>',
+      '<span style="color:#ff6347;">US IT </span> <span style="color:#ffa500;">Recruitment</span>'
+      // '<span style="color:#9370db;">Dynamic</span> <span style="color:#ff1493;">Development.</span>',
+    ],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+    smartBackspace: true,
+    showCursor: true,
+    contentType: 'html' // 👈 This is key for enabling HTML
+  });
+});
+
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+    
+const target = document.getElementById("typing-target");
+
+// Break the text into colored parts
+const parts = [
+  { text: "Clear", color: "aqua" },
+  { text: " IT", color: "aquamarine" },
+  { text: " Solutions And IT Training", color: "cornsilk" }
+];
+
+// Flatten into one full string and map positions to colors
+const fullText = parts.map(p => p.text).join('');
+const colorMap = [];
+let currentIndex = 0;
+parts.forEach(part => {
+  for (let i = 0; i < part.text.length; i++) {
+    colorMap.push(part.color);
+  }
+});
+
+let i = 0;
+let isDeleting = false;
+
+function typeEffect() {
+  const visibleText = fullText.slice(0, i);
+
+  // Build styled HTML dynamically
+  let html = '';
+  for (let j = 0; j < visibleText.length; j++) {
+    html += `<span style="color: ${colorMap[j]}">${visibleText[j]}</span>`;
+  }
+
+  target.innerHTML = html;
+
+  if (!isDeleting) {
+    if (i < fullText.length) {
+      i++;
+      setTimeout(typeEffect, 100);
+    } else {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000); // pause before deleting
+    }
+  } else {
+    if (i > 0) {
+      i--;
+      setTimeout(typeEffect, 50);
+    } else {
+      isDeleting = false;
+      setTimeout(typeEffect, 500); // pause before typing again
+    }
+  }
+}
+
+typeEffect();
+
+
+//bubble effect don't touch this code
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('mouseenter', (e) => {
+      for (let i = 0; i < 5; i++) {
+        createBubble(e.target);
+      }
+    });
+  });
+
+  function createBubble(linkElement) {
+    const bubble = document.createElement('span');
+    bubble.classList.add('bubble');
+
+    // Random size and position
+    const size = Math.random() * 8 + 6; // size between 6–14px
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+    bubble.style.left = `${Math.random() * 100}%`;
+
+    // Position relative to the link
+    bubble.style.top = `100%`;
+    linkElement.appendChild(bubble);
+
+    // Remove bubble after animation ends
+    setTimeout(() => {
+      bubble.remove();
+    }, 1000);
+  }
+
+
+    </script>
+    {% endblock extra_js %}
+    {% endblock content %}
+  </body>
+</html>
+

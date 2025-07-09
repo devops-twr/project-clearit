@@ -1,0 +1,795 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="IT Infinite - IT Solutions and Services Company HTML5 Template">
+    <meta name="author" content="potenzaglobalsolutions.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Clear IT Solutions</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.css' %}">
+    <!-- Template Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+       .bg-wrapper {
+  position: relative;
+  background: url("{% static 'images/coming-soon.jpg' %}") no-repeat center center / cover;
+  min-height: 100vh;
+  padding: 40px 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bg-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* adjust brightness here */
+  z-index: -1;
+}
+ 
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+         /* background: url('../images/coming-soon.jpg') no-repeat left center / cover; */
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .left, .center, .right {
+      flex: 1;
+      margin: 20px;
+      min-width: 300px;
+    }
+
+    .left h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .features li {
+      margin: 10px 0;
+      list-style: none;
+      padding-left: 24px;
+   
+      background-size: 20px;
+    }
+
+    .enroll-btn {
+      background-color: #ff4d30;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      border-radius: 6px;
+    }
+
+    .video-box img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .form-box {
+      background-color: white;
+      color: black;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    .form-box h3 {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff4d30;
+      color: white;
+      border: none;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 992px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left, .center, .right {
+        margin: 10px 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .left h1 {
+        font-size: 1.8em;
+      }
+
+      .form-box {
+        padding: 20px;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <!--=================================
+    cursor -->
+    <div id="cursor">
+      <div class="cursor__circle"></div>
+    </div>
+    <!--=================================
+    cursor -->
+    
+    <div id="page" class="main">
+
+      <!--=================================
+      Header -->
+     <header class="header header-default header-sticky">
+        <div class="header-inner">
+          <div class="site-logo">
+            <a class="navbar-brand" href="{% url 'index' %}"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" alt="logo" style="height: 100px;"/></a>
+          </div>
+          <div class="site-menu d-none d-xl-block">
+            <ul class="main-menu">
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'course' %}">Course</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'careers' %}">Careers</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="site-action d-none d-xl-block">
+            <div class="action-hamburger">
+              <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="hamburger-container">
+                  <span class="hamburger-inner"></span>
+                  <span class="hamburger-hidden"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mobile-action d-block d-xl-none">
+            <div class="mobile-hamburger">
+              <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+                <span class="hamburger-container">
+                  <span class="hamburger-inner"></span>
+                  <span class="hamburger-hidden"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- =================================
+      Main Menu OffCanvas -->
+      <div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+        <div class="offcanvas-header">
+          <a id="menuOffcanvasLabel" class="navbar-brand" href="{% url 'index' %}"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" alt="logo" style="height: 150px;" /></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body lenis-scroll-disable">
+          <div class="body-inner">
+            <nav class="navbar">
+              <ul class="navbar-nav">
+                <li><a class="nav-item" href="{% url 'index' %}">Home</a></li>
+                <li><a class="nav-item" href="{% url 'about' %}">About Us</a></li>
+                <li><a class="nav-item" href="{% url 'careers' %}">Careers</a></li>
+                <li><a class="nav-item" href="{% url 'service' %}">Service</a></li>
+                <li><a class="nav-item" href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="bottom-info">
+              <div class="contact-info">
+                <span class="number">+1 234 567 8910</span>
+                <a class="mail" href="#"><i class="fa-regular fa-envelope"></i>info@gmail.com</a>
+                <span class="text">Looking for collaboration for your next creative project?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--=================================
+      Header Side Panel -->
+      <div class="offcanvas offcanvas-end sidepanel-offcanvas" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="offcanvas-body lenis-scroll-disable">
+          <div class="body-inner">
+            <div class="about-info">
+              <h4 class="title mb-3">From Idea to Impact – We Support Your Journey</h4>
+              <p>At Clear IT Solutions, we believe every great venture starts with a simple idea. Whether you're launching a startup or scaling a growing business, we help turn your vision into reality. From planning and development to support and optimization, we're with you every step. We don't just offer solutions—we build lasting partnerships that drive innovation and impact.</p>
+            </div>
+            <div class="socail-info">
+              <ul class="socail-list-item">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i>Dribbble</a></li>
+              </ul>
+            </div>
+            <div class="contact-info">
+                <span class="number">+91 79955 99720</span>
+                <a class="mail" href="#"><i class="fa-regular fa-envelope"></i>hr@clearitsolutions.co</a>
+              <span class="text">Looking for collaboration for your next creative project? Fell free to connect us!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="bg-wrapper">
+      <div class="container">
+
+    <div class="left">
+     
+      <h1>DataScience and AI/Ml</h1>
+      <!-- <p>In collaboration with</p> -->
+      <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/IIT_Guwahati_Logo.svg" alt="IIT Guwahati" height="40" style="margin-right:10px;" />
+      <img src="https://img.icons8.com/color/48/000000/microsoft.png" alt="Microsoft" height="40" /> -->
+      <ul class="features">
+        <li>Learn Python, R, SQL, and core data science concepts</li>
+        <li>Become expert in machine learning, AI, and predictive analytics</li>
+        <li>Work with Pandas, NumPy, and data visualization tools</li>
+        <li>Explore big data technologies like Hadoop, Spark and more</li>
+        <li>Gain expertise in deep learning, TensorFlow, and NLP</li>
+        <!-- <li>Get IIT Guwahati certification for better job prospects</li> -->
+        <li>Build industry-level projects with real datasets</li>
+      </ul>
+      <a href="#callback-form" class="enroll-btn"><button class="enroll-btn" onclick="scrollToForm()">Enroll Now</button></a>
+
+    </div>
+
+    <div class="center video-box">
+      <!-- <img src="https://i.ibb.co/YT4Chx7/teacher-thumbnail.png" alt="Video thumbnail"> -->
+    </div>
+
+  <div class="right">
+  <div class="form-box">
+    <h3 style="color: black;">Get the syllabus and start your success journey!</h3>
+    <input type="text" id="name" placeholder="Enter your full name" required />
+    <input type="email" id="email" placeholder="Enter your email address" required />
+    <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
+    <input type="text" id="city" placeholder="Enter your city" required />
+    <input type="text" value="DataScience" disabled />
+    <button onclick="downloadSyllabus()">Download Syllabus</button>
+  </div>
+</div>
+    
+  </div>
+  </div>
+
+     
+
+        <div class="content-wrapper">
+
+          <!--=================================
+          Case Studies -->
+          <section class="space-pt">
+            <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-lg-3 col-sm-4">
+                  <div class="section-title">
+                    <span class="sub-title"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> Case Study About Data Science</span>
+                    <h2 class="title">Overview</h2>
+                  </div>
+                  <div class="text-end me-4 pt-3 pe-2">
+                    <img class="img-fluid" src="{% static 'images/case-studies/shape.png' %}" alt="#">
+                  </div>
+                </div>
+                <div class="col-lg-8 col-sm-8">
+                  <p class="fw-600 mt-md-5 pt-md-5 pt-3 mb-4 pb-2">Freshers entering the Full Stack Java field often face challenges in managing both frontend and backend technologies, such as HTML, CSS, JavaScript, Java, and SpringBoot. Due to limited hands-on experience, integrating these tools, debugging issues, and understanding real-world project workflows can be difficult. They may also struggle with version control systems like Git and deployment processes. Additionally, adapting to collaborative environments, Agile practices, and soft skills like communication and problem-solving under pressure can be overwhelming at the start. Bridging the gap between theory and practical implementation is a key hurdle for many.</p>
+                </div>
+              </div>
+               <div class="row">
+                <div class="col-md-12">
+                </div>
+               </div>
+            </div>
+          </section>
+          <!--=================================
+          Case Studies -->
+
+          <!--=================================
+          Case Info -->
+          <section class="case-info-section space-mb">
+          </section>
+          <!--=================================
+          Case Info -->
+
+          <!--=================================
+          Case Studies -->
+          <section class="space-medium-pt ellipse-top">
+            <div class="space-medium-pb ellipse-bottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="sticky-top" style="top: 80px;">
+                    <div class="section-title i">
+                      <h2 class="title">Challenge</h2>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="challenge-iteam">
+                      <h6 class="title"><img class="img-fluid" src="{% static 'images/case-studies/arrow-right.png' %}" alt="">The Challenges of Mastering Data Science – And How We Help You Overcome Them</h6>
+                      <p>Becoming a full stack Python developer is an exciting journey, but it comes with its own set of challenges:</p>
+                      <p>Learning Curve: Understanding both frontend and backend technologies simultaneously can be overwhelming for beginners.
+
+                            Integration Skills: Bridging the gap between frontend design and backend logic requires solid problem-solving skills and real-time project exposure.
+
+                            Keeping Up with Tech: Technologies evolve rapidly. Staying updated with the latest frameworks and best practices is tough without the right guidance.
+
+                            Project Confidence: Students often lack the confidence to build and deploy complete applications independently.
+
+                                    Placement Struggles: Many learners struggle to crack interviews or build portfolios that make them industry-ready.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--=================================
+          Case Studies -->
+
+          <!--=================================
+          Case Studies -->
+          <section class="space-medium-ptb ellipse-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-5 mb-4 mb-sm-0">
+                  <img class="img-fluid radius-10" src="{% static 'images/case-studies/case-study-single-01.jpg' %}" alt="#">
+                </div>
+                <div class="col-sm-7">
+                   <img class="img-fluid radius-10" src="{% static 'images/case-studies/case-study-single-02.jpg' %}" alt="#">
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          Case Studies -->
+
+          <!--=================================
+          Solution -->
+          <section class="space-medium-pb">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2>Solution</h2>
+                  <p class="mb-4 pb-3 text-white fw-600">Your Success Starts Here: Our Solution to Data Science Mastery</p>
+                  <p class="mb-0">At our Data Science Institute, we've carefully crafted a solution-oriented learning path that eliminates confusion, builds confidence, and delivers job-ready skills.
+
+                  Here's How We Solve These Challenges:
+                    Step-by-Step Learning Approach
+                        We break down complex concepts into beginner-friendly modules covering frontend (HTML, CSS, JavaScript), backend (Java, SpringBoot), databases, APIs, and deployment.
+
+                          Hands-On Real-Time Projects
+                              Each topic is paired with real-world mini and major projects to help you learn by doing and build a strong portfolio.
+
+                              Dedicated Mentorship & Doubt Support
+                          Live sessions, mentorship guidance, and regular practice assignments ensure you're never stuck alone.
+
+                              Career Development & Job Readiness
+                            From GitHub profile building, resume writing, and mock interviews to final placement support, we train you to stand out in interviews.
+
+                        Industry-Relevant Curriculum
+                            We regularly update our syllabus to match current trends and requirements in the software development industry.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          Solution -->
+
+          <!--=================================
+          Book Your Free Demo -->
+         <section class="space-medium-ptb bg-holder">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="title" style="color: #333;">Excel With <span>Clear IT Solutions</span></h2>
+      <p class="mb-4 pb-3 fw-600" style="color: #333;">Experience Our Data Science Course with a Free Demo Class</p>
+    </div>
+
+    <div class="demo-section">
+      <!-- Form -->
+ <div class="form-container" id="callback-form">
+    <form method="POST" action="/callbackForm/">
+        {% csrf_token %}
+        <input type="text" name="name" required placeholder="Enter name">
+        <input type="email" name="email" required placeholder="Enter email">
+        <input type="tel" name="number" required pattern="[0-9]{10}" placeholder="Enter number">
+        <textarea name="message" required placeholder="Enter message..."></textarea>
+        <button type="submit">Request Call Back</button>
+    </form>
+</div>
+
+      <!-- Features -->
+      <div class="features-container">
+        <div class="column">
+          <div class="feature-item green-line red">
+            <div class="icon-box">📘</div>
+            <div class="feature-text">
+              <h3>Free</h3>
+              <p>Career Guidance</p>
+            </div>
+          </div>
+          <div class="feature-item green-line red">
+            <div class="icon-box">🎓</div>
+            <div class="feature-text">
+              <h3>IIT</h3>
+              <p>Approved Curriculum</p>
+            </div>
+          </div>
+          <div class="feature-item green-line red">
+            <div class="icon-box">👤</div>
+            <div class="feature-text">
+              <h3>Dedicated</h3>
+              <p>Student Dashboard</p>
+            </div>
+          </div>
+          <div class="feature-item green-line red">
+            <div class="icon-box">🖥️</div>
+            <div class="feature-text">
+              <h3>Online Trainings</h3>
+              <p>Monday-Friday</p>
+            </div>
+          </div>
+          <div class="feature-item green-line red">
+            <div class="icon-box">🎬</div>
+            <div class="feature-text">
+              <h3>Class</h3>
+              <p>Recordings</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="feature-item green-line blue">
+            <div class="icon-box">📚</div>
+            <div class="feature-text">
+              <h3>Course</h3>
+              <p>Materials</p>
+            </div>
+          </div>
+          <div class="feature-item green-line blue">
+            <div class="icon-box">🎯</div>
+            <div class="feature-text">
+              <h3>Module</h3>
+              <p>Based Assessments</p>
+            </div>
+          </div>
+          <div class="feature-item green-line blue">
+            <div class="icon-box">🛠️</div>
+            <div class="feature-text">
+              <h3>Hands</h3>
+              <p>On Projects</p>
+            </div>
+          </div>
+          <div class="feature-item green-line blue">
+            <div class="icon-box">🎖️</div>
+            <div class="feature-text">
+              <h3>Internship</h3>
+              <p>Opportunity</p>
+            </div>
+          </div>
+          <div class="feature-item green-line blue">
+            <div class="icon-box">💼</div>
+            <div class="feature-text">
+              <h3>100%</h3>
+              <p>Job Assistance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <h1>Career Services in a Nutshell</h1>
+    
+    <div class="services-container">
+        <div class="service-box">
+            <div class="service-title">
+                <i class="fas fa-laptop-code"></i>
+                Technical Seminars
+            </div>
+            <div class="service-item">
+                <i class="fas fa-comments"></i>
+                Mock Interviews
+            </div>
+            <div class="service-item">
+                <i class="fas fa-graduation-cap"></i>
+                CRT & Job Ready Skills
+            </div>
+            <div class="service-item">
+                <i class="fas fa-briefcase"></i>
+                Dedicated Job Portal
+            </div>
+        </div>
+        
+        <div class="service-box">
+            <div class="service-title">
+                <i class="fas fa-user-tie"></i>
+                Mock Interviews
+            </div>
+            <div class="service-item">
+                <i class="fas fa-graduation-cap"></i>
+                CRT & Job Ready Skills
+            </div>
+            <div class="service-item">
+                <i class="fas fa-building"></i>
+                Internship Opportunity in an IT Company
+            </div>
+        </div>
+        
+        <div class="service-box">
+            <div class="service-title">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Technical Seminars
+            </div>
+            <div class="service-item">
+                <i class="fas fa-briefcase"></i>
+                Dedicated Job Portal
+            </div>
+            <div class="service-item">
+                <i class="fas fa-building"></i>
+                Internship Opportunity in an IT Company
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <a href="#" class="request-btn">
+        Request Call Back
+        <i class="fas fa-phone-alt"></i>
+    </a>
+          <!--=================================
+          Results -->
+          <section class="ellipse-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                    <h2>Results</h2>
+                    <p class="mb-4 pb-3 text-white fw-600">Real Success Stories from Our Data Science Graduates</p>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <h3 class="gradient-text-1 mb-2">1000+</h3>
+                    <p class="fw-600 mb-0">Students Trained</p>
+                  </div>
+                  <div class="col-md-4 mb-3 mb-md-0">
+                    <h3 class="gradient-text-1 mb-2">80%</h3>
+                    <p class="fw-600 mb-0">Placement Rate</p>
+                  </div>
+                  <div class="col-md-4">
+                    <h3 class="gradient-text-1 mb-2">50+</h3>
+                    <p class="fw-600 mb-0">Real-Time Projects Delivered</p>
+                  </div>
+               </div>
+            </div>
+          </section>
+          <!--=================================
+          Results -->
+
+        </div>
+      </div>
+<div class="container13">
+        <h1>Step into High-Paying Future</h1>
+        <h2>Choose Java Course in Hyderabad !</h2>
+        
+        <p>Upskilling in Data Science not only kick-starts your career but also helps you get placed in leading IT companies. <span class="highlight">Clear IT Solutions </span> - the best software training institute in India, is collaborated with top IT companies:</p>
+        
+        <div class="companies">
+            <div class="company-logo">
+                <i class="fab fa-google"></i>
+                <span>Google</span>
+            </div>
+            <div class="company-logo">
+                <i class="fas fa-building"></i>
+                <span>TCS</span>
+            </div>
+            <div class="company-logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>Infosys</span>
+            </div>
+            <div class="company-logo">
+                <i class="fab fa-amazon"></i>
+                <span>Amazon</span>
+            </div>
+        </div>
+        
+        <p>Offering <span class="highlight">$20+ LPA</span> for skilled Data Science professionals in roles like:</p>
+        
+        <ul class="roles-list">
+            <li class="li1">Full Stack Java Developer</li>
+            <li class="li1">Java Web Developer</li>
+            <li class="li1">Software Engineer</li>
+            <li class="li1">Cloud Engineer and many more...</li>
+        </ul>
+        
+        <div class="benefits">
+            <div class="benefit-item">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <div>Expert-Led Training</div>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-project-diagram"></i>
+                <div>Real-World Projects</div>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-briefcase"></i>
+                <div>100% Job Assistance</div>
+            </div>
+        </div>
+        
+        <p>Our Data Science training in Hyderabad equips you with expert skills, real-world projects, and <span class="highlight">100% job assistance</span>. For landing a high-paying job, this is your moment to turn your career dreams into reality.</p>
+        
+        <hr>
+        
+        <a href="#" class="contact-btn">
+            Contact Us <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+      <!--=================================
+      Site Footer -->
+     <footer class="site-footer footer-dark">
+        <div class="footer-main">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-md-5">
+                <div class="widget widget-address-info">
+                  <h5 class="widget-title">Where To Find Us</h5>
+                  <ul class="address-info-list">
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-contacts.svg' %}" alt="" /></i><span class="info"><span>  8 The  Green STE Road, Dover, </span>DELAWARE, UNITED STATES.</span></li>
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-headphone.svg' %}" alt="" /></i><span class="info"><span>+1 9802761002 </span>Mon-fri 8:30am 6:30pm</span></li>
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-email.svg' %}" alt="" /></i><span class="info"><span>hr@clearitsolutions.co </span>24x7 online support</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-5 col-md-7">
+                <div class="widget">
+                  <h5 class="widget-title">Newsletter</h5>
+                  <div class="widget widget-newsletter mb-4 pb-2">
+                    <form class="newsletter-form">
+                      <input type="text" class="form-control" placeholder="Enter Your Email">
+                      <button type="submit" class="subscribe-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                  </div>
+                  <div class="widget widget-menu">
+                    <h6 class="widget-title">Quick Links</h6>
+                    <ul class="list-unstyled list-col-3 mb-0">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about-us.html">About us</a></li>
+                      <li><a href="aws.html">AWS & DEVOPS</a></li>
+                      <li><a href="python.html">Full Stack Python</a></li>
+                      <li><a href="java.html">Java</a></li>
+                      <li><a href="datascience.html">Data Science</a></li>
+                      <li><a href="service.html">Service</a></li>
+                      <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-12 ms-auto">
+                <div class="widget widget-info">
+                  <h5 class="widget-title">Indian contact-info</h5>
+                  <a class="number" href="tel: +91 9908698806"> +91 9908698806</a>
+                  <h6 class="title">3A & 3B Mindspace, Hitech City, Madhapur, Near Metro Station, Hyderabad, Telangana, INDIA 500081</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6"><p><a class="footer-logo" href="index.html"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" alt="logo" style="height: 150px;" /></a></p></div>
+              <div class="col-lg-6 text-lg-end"><p>Developed and design by <a href="#">Clear IT Solutions &copy;</a></p></div>
+            </div>
+          </div>
+        </div>
+        <center>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p class="mb-0">© 2021 Clear IT Solutions. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+     </footer>
+
+      <!--=================================
+      Back To Top -->
+      <div class="back-to-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+      </div>
+
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/popper/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'js/swiperanimation/SwiperAnimation.min.js' %}"></script>
+    <script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/counter/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/attractHover.js' %}"></script>
+    <script src="{% static 'js/lenis.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+       <script>
+  function downloadSyllabus() {
+    // Collect form values (optional for logging or validation)
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const city = document.getElementById('city').value.trim();
+
+    // Validate basic input
+    if (!name || !email || !mobile || !city) {
+      alert("Please fill in all fields before downloading.");
+      return;
+    }
+
+    // Trigger file download
+    const link = document.createElement('a');
+    link.href = 'files/aws-devops-syllabus.pdf'; // path to your syllabus file
+    link.download = 'syllabus.pdf'; // name of the file to be downloaded
+    link.click();
+  }
+
+    function scrollToForm() {
+    document.getElementById("callback-form").scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+  </body>
+</html>

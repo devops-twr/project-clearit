@@ -1,0 +1,640 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template">
+    <meta name="description" content="IT Infinite - IT Solutions and Services Company HTML5 Template">
+    <meta name="author" content="potenzaglobalsolutions.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Clear IT Solutions</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
+
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="{% static 'css/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper/swiper.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup/magnific-popup.css' %}">
+    <!-- Template Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--Type js please don't remove-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  </head>
+  <body>
+
+    <!--=================================
+    cursor -->
+    <div id="cursor">
+      <div class="cursor__circle"></div>
+    </div>
+    <!--=================================
+    cursor -->
+    
+    <div id="page" class="main">
+
+      <!--=================================
+      Header -->
+     <header class="header header-default header-sticky header-absolute">
+        <div class="header-inner">
+          <div class="site-logo">
+            <a class="navbar-brand" href="{% url 'index' %}"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" alt="logo" style="height: 100px; " /></a>
+          </div>
+          <div class="site-menu d-none d-xl-block navigation" >
+            <ul class="main-menu">
+              <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'course' %}">Course</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'careers' %}">Careers</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="site-action d-none d-xl-block">
+            <div class="action-hamburger">
+              <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <span class="hamburger-container">
+                  <span class="hamburger-inner"></span>
+                  <span class="hamburger-hidden"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mobile-action d-block d-xl-none">
+            <div class="mobile-hamburger">
+              <a class="hamburger" href="#" data-bs-toggle="offcanvas" data-bs-target="#menuOffcanvas" aria-controls="menuOffcanvas">
+                <span class="hamburger-container">
+                  <span class="hamburger-inner"></span>
+                  <span class="hamburger-hidden"></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- =================================
+      Main Menu OffCanvas -->
+      <div class="offcanvas main-menu-offcanvas offcanvas-end" tabindex="-1" id="menuOffcanvas" aria-labelledby="menuOffcanvasLabel">
+        <div class="offcanvas-header">
+          <a id="menuOffcanvasLabel" class="navbar-brand" href="{% url 'index' %}"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}"  alt="logo" style="height: 150px;" /></a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="offcanvas-body lenis-scroll-disable">
+          <div class="body-inner">
+            <nav class="navbar">
+              <ul class="navbar-nav">
+                <li><a class="nav-item" href="{% url 'index' %}">Home</a></li>
+                <li><a class="nav-item" href="{% url 'course' %}">Course</a></li>
+                <li><a class="nav-item" href="{% url 'about' %}">About Us</a></li>
+                <li><a class="nav-item" href="{% url 'careers' %}">Careers</a></li>
+                <li><a class="nav-item" href="{% url 'service' %}">Service</a></li>
+                <li><a class="nav-item" href="{% url 'contact' %}">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="bottom-info">
+              <div class="contact-info">
+                <span class="number">+1 234 567 8910</span>
+                <a class="mail" href="#"><i class="fa-regular fa-envelope"></i>info@gmail.com</a>
+                <span class="text">Looking for collaboration for your next creative project?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--=================================
+      Header Side Panel -->
+      <div class="offcanvas offcanvas-end sidepanel-offcanvas" tabindex="-1" id="offcanvasRight">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="offcanvas-body lenis-scroll-disable">
+          <div class="body-inner">
+            <div class="about-info">
+              <h4 class="title mb-3">From Idea to Impact – We Support Your Journey</h4>
+              <p>At Clear IT Solutions, we believe every great venture starts with a simple idea. Whether you're launching a startup or scaling a growing business, we help turn your vision into reality. From planning and development to support and optimization, we're with you every step. We don't just offer solutions—we build lasting partnerships that drive innovation and impact.</p>
+            </div>
+            <div class="socail-info">
+              <ul class="socail-list-item">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+                <li><a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a></li>
+                <li><a href="#"><i class="fa-brands fa-dribbble"></i>Dribbble</a></li>
+              </ul>
+            </div>
+            <div class="contact-info">
+                <span class="number">+91 79955 99720</span>
+                <a class="mail" href="#"><i class="fa-regular fa-envelope"></i>hr@clearitsolutions.co</a>
+              <span class="text">Looking for collaboration for your next creative project? Fell free to connect us!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="site-content">
+
+      <div class="container-fluid">
+        <div class="item-efftect">
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+           <div class="efftect overflow-hidden"></div>
+        </div>
+      </div>
+
+        <!--=================================
+        Page Header -->
+        <div class="inner-header bg-holder" style="background-image: url({% static 'images/banner/inner-header/page-header-01.jpg' %});">
+          <div class="container">
+            <div class="row  justify-content-center">
+              <div class="col-md-12 text-center">
+                <h1 class="title">About Clear IT Solutions</h1>
+                <p>where clarity meets opportunity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-wrapper">
+
+          <!--=================================
+          About Info -->
+          <section class="space-pt z-index-2">
+            <div class="container">
+              <div class="row justify-content-between">
+                <div class="col-lg-7 mb-5 mb-lg-0">
+                  <div class="section-title pb-0 pb-lg-4">
+                    <span class="sub-title"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> About Us</span>
+                    <h2 class="title"> Your experience is everything to us </h2>
+                  </div>
+                   <div class="row">
+                     <div class="col-sm-4">
+                        <img class="img-fluid" src="{% static 'images/about/about-03.jpg' %}" alt="#">
+                     </div>
+                     <div class="col-sm-8">
+                      <p class="ps-lg-3 mt-4 mt-sm-0">Empowering Innovation through Expert Talent Acquisition
+
+Tailored IT Solutions for a Dynamic Market
+
+In today's rapidly evolving technological landscape, organizations require top-tier talent to navigate emerging technologies. Our comprehensive IT staffing and recruiting services connect businesses with highly skilled professionals in DevOps, cloud computing, AI, and security.
+
+Your Skills Are in High Demand
+
+If you possess niche skills in leading development frameworks and emerging technologies, you are the key to driving progress. Join us to leverage your expertise and help Fortune 500 companies translate next-gen tech into real-time results.
+
+</p>
+                     <div class="d-flex justify-content-center mt-5 ms-sm-5 ms-0">
+                       <!-- <a class="btn btn-effect" href="#">
+                        <span>About Us</span> 
+                       <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_59_253)"><path d="M19.4854 11.4293L17.0513 12.221C13.1214 13.4993 10.3036 16.9595 9.84784 21.0668C9.49371 16.981 6.71926 13.5081 2.81255 12.2604L0.210283 11.4293" stroke="white" stroke-width="2"/><path d="M9.83594 20.8889L9.83594 0" stroke="white" stroke-width="2"/></g><defs><clipPath id="clip0_59_253"><rect width="21.3333" height="20" fill="white" transform="translate(20) rotate(90)"/></clipPath></defs></svg>
+                       </a> -->
+                       
+                      </div>
+                      
+                     </div>
+                   </div>
+                   <p class="auto-type"></p>
+                   <div class="row mt-4 mt-sm-5">
+                    <div class="col-sm-6">
+                      <div class="counter counter-style-1">
+                        <div class="counter-number"><span class="timer mb-0" data-to="150" data-speed="2000">150</span><span class="suffix">+</span></div>
+                        <div class="counter-info"><span class="counter-title">Business Peoples</span></div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="counter counter-style-1">
+                        <div class="counter-number"><span class="timer mb-0" data-to="100" data-speed="2000">100</span><span class="suffix">%</span></div>
+                        <div class="counter-info"><span class="counter-title">Customer Satisfaction</span></div>
+                      </div>
+                    </div>
+                   </div>
+                </div>
+                <div class="col-lg-5">
+                  <img class="img-fluid ps-lg-5" src="{% static 'images/about/about-01.jpg' %}" alt="#">
+                </div>
+            
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          About Info -->
+
+          <!--=================================
+          Client Logo -->
+          <div class="space-ptb ">
+            <h3 class="text-center">Our Trusted Clients</h3>
+            <div class="container-fluid p-0">
+              <div class="row g-0">
+                <div class="col-md-12">
+                  <div class="marquee-wrapper">
+                    <div class="marquee-inner">
+                      <div class="marquee-item">   
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt="" /></span>
+                        <span class="title">Infosys</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt="" /></span>
+                        <span class="title">TCS</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt="" /></span>
+                        <span class="title">IBM</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt="" /></span>
+                        <span class="title">Amazon</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt="" /></span>
+                        <span class="title">Accenture</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon1.png' %}" alt="" /></span>
+                        <span class="title">Deloitte</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon2.png' %}" alt="" /></span>
+                        <span class="title">Flipkart</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon3.png' %}" alt="" /></span>
+                        <span class="title">Myntra</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon4.png' %}" alt="" /></span>
+                        <span class="title">Meesho</span>
+                      </div>
+                      <div class="marquee-item">
+                        <span class="icon"><img class="img-fluid" src="{% static 'images/client-logo/brand-icon5.png' %}" alt="" /></span>
+                        <span class="title">Google</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--=================================
+          Client Logo -->
+
+          <!--=================================
+          History -->
+          <section class="bg-black ellipse-top">
+            <div class="space-pb ellipse-bottom">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-5">
+                    <div class="sticky-top" style="top: 80px;">
+                    <div class="section-title mb-0">
+                      <span class="sub-title"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt="" /> Our History</span>
+                      <h2 class="title">Our History</h2>
+                      <p class="auto-type1"></p>
+                    </div >
+                    <p class="mb-5 mb-lg-0 ms-lg-5"></p>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <div class="history-wrapper">
+                      <div class="history-year-sm">2022</div>
+                      <div class="history-info">
+                        <div class="history-year-lg">2022</div>
+                        <div class="history-content">
+                          <h3> The Foundation Year</h3>
+                          <p>Founded in 2022, Clear IT Solutions began as a dynamic US-based IT staffing and recruiting firm with a dual presence in Delaware, USA, and Hyderabad, India. From day one, our vision was clear: to empower businesses with top-tier tech talent while equipping professionals with the skills and opportunities needed to thrive in the digital age. </p>
+                          <blockquote><p> Building a Global IT Solutions Partner  </p>
+                                                <p>What started as a staffing firm quickly evolved into a multifaceted IT solutions provider, offering:  </p>
+                                        - IT Staffing & Recruitment – Bridging talent gaps for startups to Fortune 500 companies.  
+                                        - Technology Training & Real-Time Projects – Hands-on training in cutting-edge technologies.  
+                                            - Internships & Certifications* – Launching careers with industry-recognized credentials.</p>
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="history-wrapper mt-4 mb-4">
+                      <div class="history-year-sm">2023</div>
+                      <div class="history-info">
+                        <div class="history-year-lg">2023</div>
+                        <div class="history-content">
+                          <h3> Expansion into Training & Workforce Development</h3>
+                          <b><p>Launched a comprehensive IT training division, offering industry-relevant courses in Full Stack Development, Data Science, Cloud Computing, DevOps, and more.</p></b>
+                          <blockquote>Introduced real-time project experience and mentorship programs, helping professionals gain practical, hands-on exposure.
+                                     Started internship and certification initiatives, creating career-launching opportunities for college students and job seekers.
+                                     <b>Gained traction with startups and mid-size tech firms seeking pre-trained, job-ready candidates.</b>
+                          </blockquote>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="history-wrapper mt-4 mb-4">
+                      <div class="history-year-sm">2024</div>
+                      <div class="history-info">
+                        <div class="history-year-lg">2024</div>
+                        <div class="history-content">
+                          <h3>Strategic Global Collaborations & Recognition</h3>
+                         <blockquote><p><b>Signed key partnerships with multinational companies like IBM, TCS, Infosys, and others for staffing and workforce solutions.</b>
+                                      Delivered corporate training programs for enterprise clients, helping teams upskill in cutting-edge technologies.
+                                          Scaled operations across multiple verticals including healthcare, finance, logistics, and retail.
+                                              Recognized as a trusted name in global talent sourcing and IT workforce development.
+                                                     Reached the milestone of training 5,000+ professionals* and *successfully placing hundreds in high-impact roles.
+                                                </p></blockquote>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="history-wrapper">
+                      <div class="history-year-sm">2025</div>
+                      <div class="history-info">
+                        <div class="history-year-lg">2025</div>
+                        <div class="history-content">
+                          <h3>Leading the Way into the Future</h3>
+                              <b> <blockquote>Evolved into a comprehensive IT ecosystem provider, delivering end-to-end solutions: staffing, training, internships, certifications, and placements.
+                              Invested in *digital platforms and AI-based recruitment tools* to improve candidate matching and client satisfaction.
+                              Expanded our *training curriculum with AI, Machine Learning, and Cybersecurity tracks*, ensuring learners stay ahead of industry trends.
+                              Launched a *global talent network, connecting skilled professionals with companies worldwide, with **24/7 support and virtual onboarding* capabilities.
+                              Strengthened internal teams across USA and India to support growing demand from global clients.</blockquote></b>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          History -->
+
+          <!--=================================
+          Our Testimonial -->
+          <section class="space-pt testimonial-section overflow-hidden bg-black ellipse-top">
+            <div class="space-pb ellipse-bottom">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-md-10">
+                    <div class="section-title text-center">
+                      <span class="sub-title justify-content-center"><img class="img-fluid" src="{% static 'images/subtitle-icon.png' %}" alt=""> Our Testimonial</span>
+                      <h2 class="title"> Over 500 clients and 5,000 projects across the globe.</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-start">
+                  <div class="col-md-11">
+                    <div class="owl-carousel slider-overflow" data-cursor-type="text" data-custom-text="Drag" data-nav-arrow="false" data-items="2" data-lg-items="1" data-md-items="1" data-sm-items="1" data-space="50">
+                      <div class="item">
+                        <div class="testimonial-wrapper testimonial-style-2">
+                          <div class="testimonial-ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+                          <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                          <div class="testimonial-content">
+                            <p>The IT-Hub database has been one of our current sources for recruitment, backed by a very experienced team who would go out of their way to make sure that requests are taken ahead.</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-info">
+                              <h6 class="author-name">Key Benefits</h6>
+                              <span class="author-position">Administrator</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="testimonial-wrapper testimonial-style-2">
+                          <div class="testimonial-ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+                          <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                          <div class="testimonial-content">
+                            <p>The IT-Hub database has been one of our current sources for recruitment, backed by a very experienced team who would go out of their way to make sure that requests are taken ahead.</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-info">
+                              <h6 class="author-name">Joanna williams</h6>
+                              <span class="author-position">Consultant</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="testimonial-wrapper testimonial-style-2">
+                          <div class="testimonial-ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+                          <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                          <div class="testimonial-content">
+                            <p>The IT-Hub database has been one of our current sources for recruitment, backed by a very experienced team who would go out of their way to make sure that requests are taken ahead.</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-info">
+                              <h6 class="author-name">Anne Smith</h6>
+                              <span class="author-position">Officer</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="testimonial-wrapper testimonial-style-2">
+                          <div class="testimonial-ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                          </div>
+                          <div class="testimonial-quote"><img class="img-fluid" src="{% static 'images/quote-icon-01.png' %}" alt="" /></div>
+                          <div class="testimonial-content">
+                            <p>The IT-Hub database has been one of our current sources for recruitment, backed by a very experienced team who would go out of their way to make sure that requests are taken ahead.</p>
+                          </div>
+                          <div class="testimonial-author">
+                            <div class="author-info">
+                              <h6 class="author-name">John Doe</h6>
+                              <span class="author-position">Director</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--=================================
+          Our Testimonial -->
+
+        </div>
+      </div>
+
+      <!--=================================
+      Site Footer -->
+      <footer class="site-footer footer-dark">
+        <div class="footer-main">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-md-5">
+                <div class="widget widget-address-info">
+                  <h5 class="widget-title">Where To Find Us</h5>
+                  <ul class="address-info-list">
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-contacts.svg' %}" alt="" /></i><span class="info"><span>17504 Carlton Cuevas Rd </span>Gulfport, MS, 39503</span></li>
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-headphone.svg' %}" alt="" /></i><span class="info"><span>001123456789 </span>Mon-fri 8:30am 6:30pm</span></li>
+                    <li><i class="icon"><img class="img-fluid" src="{% static 'images/svg/address-info-email.svg' %}" alt="" /></i><span class="info"><span>Info@example.com </span>24x7 online support</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-5 col-md-7">
+                <div class="widget">
+                  <h5 class="widget-title">Newsletter</h5>
+                  <div class="widget widget-newsletter mb-4 pb-2">
+                    <form class="newsletter-form">
+                      <input type="text" class="form-control" placeholder="Enter Your Email">
+                      <button type="submit" class="subscribe-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                  </div>
+                  <div class="widget widget-menu">
+                    <h6 class="widget-title">Quick Links</h6>
+                    <ul class="list-unstyled list-col-3 mb-0">
+                      <li><a href="{% url 'index' %}">Home</a></li>
+                      <li><a href="{% url 'about' %}">About us</a></li>
+                      <li><a href="{% url 'course' %}">Course</a></li>
+                      <li><a href="{% url 'service' %}">Services</a></li>
+                      <li><a href="{% url 'careers' %}">Careers</a></li>
+
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-12 ms-auto">
+                <div class="widget widget-info">
+                  <h5 class="widget-title">Call Center</h5>
+                  <a class="number" href="tel:+1800555500">1-800-555-500</a>
+                  <h6 class="title">and get a free estimate</h6>
+                </div>
+                <div class="widget-socail">
+                  <ul class="socail-icon">
+                    <li><a href="#">Fb</a></li>
+                    <li><a href="#">Dr</a></li>
+                    <li><a href="#">Tw</a></li>
+                    <li><a href="#">Be</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6"><p><a class="footer-logo" href="{% url 'index' %}"><img class="img-fluid" src="{% static 'images/logo-main4-removebg-preview.png' %}" style="height: 150px;" alt="logo" /></a></p></div>
+              <div class="col-lg-6 text-lg-end"><p>Develop and design by <a href="#">Clear IT Solutions</a></p></div>
+            </div>
+          </div>
+        </div>
+            <center>
+          <div class="footer-bottom">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <p class="mb-0">© 2021 Clear IT Solutions. All rights reserved.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+      </footer>
+
+      <!--=================================
+      Back To Top -->
+      <div class="back-to-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+          <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+        </svg>
+      </div>
+
+    </div>
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/popper/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script src="{% static 'js/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax.min.js' %}"></script>
+    <script src="{% static 'js/jarallax/jarallax-video.min.js' %}"></script>
+    <script src="{% static 'js/swiper/swiper.min.js' %}"></script>
+    <script src="{% static 'js/swiperanimation/SwiperAnimation.min.js' %}"></script>
+    <script src="{% static 'js/shuffle/shuffle.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'js/counter/jquery.countTo.js' %}"></script>
+    <script src="{% static 'js/gsap.min.js' %}"></script>
+    <script src="{% static 'js/attractHover.js' %}"></script>
+    <script src="{% static 'js/lenis.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script> <!-- Template Scripts (Do not remove)-->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed(".auto-type", {
+      strings: [
+        "Be Part of a Transformative Journey.<br><br>At Clear IT Solutions Global Services, we foster an environment where change is embraced. As part of our team, you will work on complex projects that promote agility and innovation across various domains including:<br><br><strong>AI, ML & Automation<br>Agile Transformation<br>Application Innovation<br>Business Modernization<br>Cloud Services<br>Data Analytics & Insights<br>DevOps & Agile Practices<br>Digital Workplace Services</strong><br><br>",
+        "A World of Opportunities Awaits You.<br><br>The transformation landscape is vast, offering unlimited career prospects across more than 100 clients throughout United States of America. With us, your career can grow alongside the technology that drives business forward.",
+        "Your Path to Success Starts Here.<br><br>No matter the size or scope of a project—from proof-of-concept initiatives to comprehensive technology roadmaps—our global solutions delivery team ensures your success without limits. Imagine the possibilities when you join forces with us.",
+        "The Possibilities Are Limitless.<br><br>Your career trajectory can thrive amidst growth and variability. With more than 100 clients globally across United States of America, we provide you with boundless opportunities to showcase your talents.",
+        "A Commitment to Excellence in Delivery.<br><br>No project is too small or too large. From proof-of-concept initiatives to comprehensive maturity assessments and technology roadmaps, our global solutions are designed to exceed expectations—delivering quality without limits.",
+        "Your future begins today at Clear IT Solutions—embrace the opportunity!<br><br>Together We Can Create What's Next!"
+      ],
+      typeSpeed: 30,
+      backSpeed: 20,
+      backDelay: 1000,
+      startDelay: 300,
+      loop: true,
+      contentType: 'html', // Important for allowing HTML inside strings
+      showCursor: true
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    new Typed(".auto-type1", {
+      strings: [
+        "From Vision to Reality<br><br>Founded with a bold vision to redefine how businesses embrace digital transformation, <strong>Clear IT Solutions Global Services</strong> began as a small group of passionate technologists determined to make a difference. What started as a niche consultancy has grown into a global IT powerhouse delivering innovative solutions across diverse industries.",
+        
+        "Early BeginningsIn our early years, we focused on delivering agile solutions for startups and mid-sized enterprises. With a strong foundation in software development and system integration, we built a reputation for delivering projects on time, on budget, and beyond expectations.",
+        
+        "Growth and Global Reach<br><br>As technology evolved, so did we. <strong>Clear IT Solutions</strong> expanded its expertise into cloud computing, data analytics, automation, and digital workplace transformation. Our client base grew rapidly, spanning over 100 organizations across the United States and beyond."
+      ],
+      typeSpeed: 30,
+      backSpeed: 20,
+      backDelay: 1000,
+      startDelay: 500,
+      loop: true,
+      contentType: 'html', // Important for rendering HTML properly
+      showCursor: true
+    });
+  });
+</script>
+
+  </body>
+</html>
