@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  sqlite:
+    image: alpine/sqlite:3.49.2
+    container_name: sqlite
+    volumes:
+      - ./db.sqlite3:/var/sqlite/db.sqlite3
+    networks:
+      - clearit-net
+
+  clearit:
+    build: .
+    container_name: clearit
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+
+    depends_on:
+      - sqlite
+    networks:
+      - clearit-net
+
+networks:
+  clearit-net:
+    driver: bridge
